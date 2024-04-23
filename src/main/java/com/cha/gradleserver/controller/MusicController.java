@@ -21,6 +21,12 @@ public class MusicController {
         this.musicService = musicService;
     }
 
+    @GetMapping("/test")
+    public String addToPlaylist() {
+
+        return "hello world";
+    }
+
     @PostMapping("/api/addToPlaylist")
     public ResponseEntity<String> addToPlaylist(@RequestBody String selectedSong) {
         boolean success = musicService.addToPlaylist(selectedSong);
