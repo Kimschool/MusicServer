@@ -20,6 +20,11 @@ public class MusicController {
     public MusicController(MusicService musicService) {
         this.musicService = musicService;
     }
+    
+    @GetMapping("/test")
+    public String test() {
+        return "test";
+    }
 
     @PostMapping("/api/addToPlaylist")
     public ResponseEntity<String> addToPlaylist(@RequestBody String selectedSong) {
