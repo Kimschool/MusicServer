@@ -18,7 +18,7 @@ import com.google.api.client.extensions.jetty.auth.oauth2.LocalServerReceiver;
 
 public class YouTubeAuth {
     
-    private static final String CLIENT_SECRETS_FILE = "client_secret.json";
+    private static final String CLIENT_SECRETS_FILE = "static/client_secret.json";
     
     private static final String REDIRECT_URI = "http://localhost:8080";
 
@@ -41,7 +41,7 @@ public class YouTubeAuth {
 
     public static Credential authorize() throws IOException, GeneralSecurityException {
         GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(JSON_FACTORY,
-                new InputStreamReader(YouTubeAuth.class.getResourceAsStream("/client_secret.json")));
+                new InputStreamReader(YouTubeAuth.class.getResourceAsStream("/static/client_secret.json")));
 
         HttpTransport httpTransport = GoogleNetHttpTransport.newTrustedTransport();
 

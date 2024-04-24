@@ -34,7 +34,7 @@ public class MusicServiceImpl implements MusicService{
 
     @Override
     public boolean addToPlaylist(String selectedSong) {
-        String playlistId = "PLyBo_4T8mx6CPlvgJDzG08-he10knjGcy";
+        String playlistId = "PLxNEw-_DzPGMC3JPzjAhElo6uJrbC5mlq";
         try {
             // Gson 객체 생성
             Gson gson = new Gson();
