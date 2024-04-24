@@ -3,7 +3,10 @@ package com.cha.gradleserver.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.cha.gradleserver.service.MusicService;
 
@@ -17,11 +20,10 @@ public class MusicController {
     public MusicController(MusicService musicService) {
         this.musicService = musicService;
     }
-
+    
     @GetMapping("/test")
     public String test() {
-
-        return "hello world";
+        return "test";
     }
 
     @PostMapping("/api/addToPlaylist")
